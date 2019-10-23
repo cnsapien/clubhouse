@@ -1,0 +1,11 @@
+page = has the content of a web page stored as a string
+start_link = page.find ('<a href=')
+start_quote = page.find('"', start_link)
+end_quote = page.find('"', start_quote+1)
+url = page[start_quote+1:end_quote]
+print url
+
+speed_of_light = 299800000. #m per s
+nano_per_sec = 1000000000. # 1 billion
+nanodistance = speed_of_light / nano_per_sec
+print nanodistance
